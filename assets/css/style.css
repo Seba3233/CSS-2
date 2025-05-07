@@ -1,24 +1,35 @@
 * {
-    margin: 0;
+    margin: 0px;
+    padding: 0px    ;
     box-sizing: border-box;
 }
+
+
 body {
-    min-width: 100vh;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
 }
+
 nav {
-    background-color: aqua;
+    background-color: rgb(182, 223, 94);
     text-align: center;
     position: sticky;
-    padding: 10px 0px 10px 0px
+    padding: 10px 0px 10px 0px;
+    width: 100%;
+    
 }
 main {
     display: flex;
+    background-size: cover;
+    width: 100%;
+    
 }
 aside {
     padding: 1em;
-    background-color: aquamarine;
+    background-color: rgb(237, 249, 229);
     /* width: 20%; */
-    height: 100vh;
+    /* height: 100vh; */
 }
 .categoria {
     padding: 1em 1em 0px 0px;
@@ -34,17 +45,46 @@ ul {
 .principal {
     padding: 1em;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 50% 50%;
     gap: 1em;
-    background-color: gray;
+    background-color: rgb(230, 241, 214);
     width: 100%;
-    height: 100vh;
+    justify-content: center;
+    
 }
 .producto {
-    background-color: aliceblue;
+    box-sizing: border-box;
+    background-color: rgb(216, 229, 240);
+    display: flex;
+    flex-direction: column;
+    object-fit: cover;
+    width: 300px;
+    height: 400px;
+    justify-content: center;
+    align-items: center ;
+    padding: 4px;
 }
+img {
+    size: auto ;
+    max-width: 250px;
+    max-height: 350px;
+    flex:   1;
+    border: 1px blue;
+    
+}
+
+.titulo {
+    padding-top: 1px;
+}
+
 footer {
     padding: 1em;
-    background-color: aqua;
+    background-color: rgb(182, 223, 94);
     text-align: center;
+}
+@media (max-width: 768px) {
+    aside {
+      display: none; /* Ocultar en pantallas pequeñas */
+    }
 }
